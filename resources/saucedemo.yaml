@@ -1,0 +1,8 @@
+credentials:
+  valid_user: standard_user
+  locked_user: locked_out_user
+  password: secret_sauce
+
+products:
+  backpack: Sauce Labs Backpack
+  bike_light: Sauce Labs Bike Light
