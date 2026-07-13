@@ -1,10 +1,12 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
-${URL_CHECKBOXES}     https://the-internet.herokuapp.com/checkboxes
-${CHECKBOX_1}         css=input[type="checkbox"]:nth-of-type(1)
-${CHECKBOX_2}         css=input[type="checkbox"]:nth-of-type(2)
+${URL_CHECKBOXES}       https://the-internet.herokuapp.com/checkboxes
+${CHECKBOX_1}           css=input[type="checkbox"]:nth-of-type(1)
+${CHECKBOX_2}           css=input[type="checkbox"]:nth-of-type(2)
+
 
 *** Keywords ***
 Open Checkboxes Page

@@ -1,11 +1,13 @@
 *** Settings ***
-Library    Browser
-Library    OperatingSystem
+Library     Browser
+Library     OperatingSystem
+
 
 *** Variables ***
-${URL_DOWNLOAD}       https://the-internet.herokuapp.com/download
-${DOWNLOAD_DIR}    ${EXECDIR}${/}resources${/}downloads
-${FILE_LINKS}         css=.example a
+${URL_DOWNLOAD}     https://the-internet.herokuapp.com/download
+${DOWNLOAD_DIR}     ${EXECDIR}${/}resources${/}downloads
+${FILE_LINKS}       css=.example a
+
 
 *** Keywords ***
 Open Download Page
@@ -37,4 +39,4 @@ Delete Downloaded File
     [Documentation]    Deletes the downloaded file from the local machine
     [Arguments]    ${file_name}
     ${file_exists}    Run Keyword And Return Status    File Should Exist    ${DOWNLOAD_DIR}${/}${file_name}
-    Run Keyword If    ${file_exists}    Remove File    ${DOWNLOAD_DIR}${/}${file_name}
+    IF    ${file_exists}    Remove File    ${DOWNLOAD_DIR}${/}${file_name}

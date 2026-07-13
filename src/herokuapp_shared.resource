@@ -1,6 +1,5 @@
 *** Settings ***
-Library    Browser    timeout=30s
-
+Library     Browser    timeout=30s
 Resource    ./page_object/herokuapp/addremoveelements.resource
 Resource    ./page_object/herokuapp/dropdown.resource
 Resource    ./page_object/herokuapp/fileupload.resource

@@ -1,5 +1,6 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
 ${PRODUCT_LIST}         css=.inventory_list
@@ -7,6 +8,7 @@ ${ADD_BACKPACK}         css=[data-test="add-to-cart-sauce-labs-backpack"]
 ${ADD_BIKE_LIGHT}       css=[data-test="add-to-cart-sauce-labs-bike-light"]
 ${CART_BADGE}           css=.shopping_cart_badge
 ${CART_ICON}            css=.shopping_cart_link
+
 
 *** Keywords ***
 Verify Product List Is Visible

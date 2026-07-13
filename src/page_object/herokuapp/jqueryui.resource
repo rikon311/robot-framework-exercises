@@ -1,14 +1,16 @@
 *** Settings ***
-Library    Browser
-Library    Collections
+Library     Browser
+Library     Collections
+
 
 *** Variables ***
-${URL_JQUERYUI}     https://the-internet.herokuapp.com/jqueryui
-${MENU_LINK}        text=menu
-${ENABLE_MENU}      text=Enable
-${DOWNLOADS_MENU}   text=Downloads
-@{FILE_TYPES}       PDF    CSV    Excel
-${DOWNLOAD_DIR}     ${EXECDIR}${/}resources${/}downloads
+${URL_JQUERYUI}         https://the-internet.herokuapp.com/jqueryui
+${MENU_LINK}            text=menu
+${ENABLE_MENU}          text=Enable
+${DOWNLOADS_MENU}       text=Downloads
+@{FILE_TYPES}           PDF    CSV    Excel
+${DOWNLOAD_DIR}         ${EXECDIR}${/}resources${/}downloads
+
 
 *** Keywords ***
 Open JQuery UI Page

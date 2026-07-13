@@ -1,5 +1,6 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
 ${URL}                  https://www.saucedemo.com/
@@ -7,6 +8,7 @@ ${USERNAME_FIELD}       id=user-name
 ${PASSWORD_FIELD}       id=password
 ${LOGIN_BUTTON}         id=login-button
 ${PRODUCT_LIST}         css=.inventory_list
+
 
 *** Keywords ***
 Open Login Page

@@ -1,6 +1,7 @@
 *** Settings ***
-Documentation    Test Suite for Herokuapp application
-Resource         ../src/herokuapp_shared.resource
+Documentation       Test Suite for Herokuapp application
+
+Resource            ../src/herokuapp_shared.resource
 
 
 *** Test Cases ***
@@ -13,14 +14,14 @@ TC01 - Add & Remove Elements
     [Teardown]    Close Browser
 
 TC02 - Dropdown
-   [Documentation]   Verifies dropdown functionality from the page
-   ...   Precondition: Open "https://the-internet.herokuapp.com/dropdown" page
-   Open "Dropdown" page
-   Check selected option   Please select an option
-   Select option   Option 1
-   Check selected option   Option 1
-   Select option   Option 2
-   Check selected option   Option 2
+    [Documentation]    Verifies dropdown functionality from the page
+    ...    Precondition: Open "https://the-internet.herokuapp.com/dropdown" page
+    Open "Dropdown" page
+    Check selected option    Please select an option
+    Select option    Option 1
+    Check selected option    Option 1
+    Select option    Option 2
+    Check selected option    Option 2
 
 TC03 - File Upload
     [Documentation]    Verifies file upload functionality
@@ -73,26 +74,25 @@ TC08 - File Download
     [Teardown]    Run Keywords    Delete Downloaded File    ${file_name}    AND    Close Browser
 
 TC09 - Entry ad
-   [Documentation]   Verifies the modal functionality
-   Open modal url
-   Close modal and check is disappeared
-   Refresh page x times  3
-   Check modal  False
-   Click "click here" link
-   Refresh page x times  1
-   Check modal  True
-   [Teardown]    Close Browser
-
+    [Documentation]    Verifies the modal functionality
+    Open modal url
+    Close modal and check is disappeared
+    Refresh page x times    3
+    Check modal    False
+    Click "click here" link
+    Refresh page x times    1
+    Check modal    True
+    [Teardown]    Close Browser
 
 TC10 - Key presses
-   [Documentation]  Checks whether keys are pressed or not, and the last key pressed is shown on the web page
-   Open "key presses" page
-   Type in text field  supercalifragilistichespiralidoso
-   Verify character typed  O
-   Clear text field
-   Type in text field  supercalifragilis
-   Verify character typed  S
-   [Teardown]  Close Browser
+    [Documentation]    Checks whether keys are pressed or not, and the last key pressed is shown on the web page
+    Open "key presses" page
+    Type in text field    supercalifragilistichespiralidoso
+    Verify character typed    O
+    Clear text field
+    Type in text field    supercalifragilis
+    Verify character typed    S
+    [Teardown]    Close Browser
 
 TC11 - Context Menu
     [Documentation]    Verifies context menu functionality on hot spot area

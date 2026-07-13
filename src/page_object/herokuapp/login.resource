@@ -1,10 +1,12 @@
 *** Settings ***
-Library  Browser
+Library     Browser
+
 
 *** Variables ***
-${URL_LOGIN}        https://the-internet.herokuapp.com/login
-${USERNAME_FIELD}   id=username
-${PASSWORD_FIELD}   id=password
+${URL_LOGIN}            https://the-internet.herokuapp.com/login
+${USERNAME_FIELD}       id=username
+${PASSWORD_FIELD}       id=password
+
 
 *** Keywords ***
 Open Login Page

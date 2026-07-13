@@ -1,10 +1,12 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
-${URL_ADD_REMOVE_ELEMENTS}    https://the-internet.herokuapp.com/add_remove_elements/
-${ADD_ELEMENT}    text=Add Element
-${DELETE_ELEMENT}    text=Delete
+${URL_ADD_REMOVE_ELEMENTS}      https://the-internet.herokuapp.com/add_remove_elements/
+${ADD_ELEMENT}                  text=Add Element
+${DELETE_ELEMENT}               text=Delete
+
 
 *** Keywords ***
 Open "Add/Remove elements" page
@@ -16,7 +18,7 @@ Open "Add/Remove elements" page
 Click "Add Element"
     [Documentation]    Clicks "Add Element" button and checks that "Delete" button is visible
     Click    ${ADD_ELEMENT}
-    Wait For Elements State   ${DELETE_ELEMENT}   visible
+    Wait For Elements State    ${DELETE_ELEMENT}    visible
 
 Click "Delete" button
     [Documentation]    Clicks "Delete" button and checks that the "Delete" button is not visible anymore

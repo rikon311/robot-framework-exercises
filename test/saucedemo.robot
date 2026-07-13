@@ -1,6 +1,8 @@
 *** Settings ***
-Documentation    Test Suite for SauceDemo application
-Resource         ../src/saucedemo_shared.resource
+Documentation       Test Suite for SauceDemo application
+
+Resource            ../src/saucedemo_shared.resource
+
 
 *** Test Cases ***
 TC01 - Valid Login

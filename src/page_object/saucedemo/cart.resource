@@ -1,9 +1,11 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
-${CART_LIST}            css=.cart_list
-${CART_ITEM}            css=.cart_item
+${CART_LIST}    css=.cart_list
+${CART_ITEM}    css=.cart_item
+
 
 *** Keywords ***
 Verify Cart Contains Products

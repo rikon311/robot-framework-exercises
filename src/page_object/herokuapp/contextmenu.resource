@@ -1,9 +1,11 @@
 *** Settings ***
-Library    Browser
+Library     Browser
+
 
 *** Variables ***
 ${URL_CONTEXT}      https://the-internet.herokuapp.com/context_menu
 ${HOT_SPOT}         id=hot-spot
+
 
 *** Keywords ***
 Open Context Menu Page

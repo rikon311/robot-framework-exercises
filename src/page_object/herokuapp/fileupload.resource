@@ -1,21 +1,22 @@
 *** Settings ***
-Library    Browser
-Library    OperatingSystem
-Library    String
+Library     Browser
+Library     OperatingSystem
+Library     String
 
 
 *** Variables ***
-${UPLOAD_URL}    https://the-internet.herokuapp.com/upload
-${UPLOAD_INPUT}    id=file-upload
-${UPLOAD_BUTTON}   id=file-submit
-${FILE_NAME}       testfile.txt
+${UPLOAD_URL}       https://the-internet.herokuapp.com/upload
+${UPLOAD_INPUT}     id=file-upload
+${UPLOAD_BUTTON}    id=file-submit
+${FILE_NAME}        testfile.txt
+
 
 *** Keywords ***
 Open File Upload page
-  [Documentation]  Opens "https://the-internet.herokuapp.com/upload" page
-  New Browser  chromium  headless=False
-  New Page  ${UPLOAD_URL}
-  Wait For Elements State  ${UPLOAD_BUTTON}  visible
+    [Documentation]    Opens "https://the-internet.herokuapp.com/upload" page
+    New Browser    chromium    headless=False
+    New Page    ${UPLOAD_URL}
+    Wait For Elements State    ${UPLOAD_BUTTON}    visible
 
 Create Test File
     [Documentation]    Creates a test file with random 100 character text

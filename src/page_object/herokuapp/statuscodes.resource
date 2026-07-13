@@ -1,10 +1,12 @@
 *** Settings ***
-Library    Browser
-Library    RequestsLibrary
+Library     Browser
+Library     RequestsLibrary
+
 
 *** Variables ***
-${URL_STATUS}      https://the-internet.herokuapp.com/status_codes
-@{STATUS_CODES}    200    301    404    500
+${URL_STATUS}       https://the-internet.herokuapp.com/status_codes
+@{STATUS_CODES}     200    301    404    500
+
 
 *** Keywords ***
 Open Status Codes Page
