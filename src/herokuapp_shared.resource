@@ -11,3 +11,4 @@ Resource    ./page_object/herokuapp/tinymce.resource
 Resource    ./page_object/herokuapp/filedownload.resource
 Resource    ./page_object/herokuapp/entryad.resource
 Resource    ./page_object/herokuapp/keypresses.resource
+Resource    ./page_object/herokuapp/contextmenu.resource

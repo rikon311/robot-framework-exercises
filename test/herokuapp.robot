@@ -93,3 +93,12 @@ TC10 - Key presses
    Type in text field  supercalifragilis
    Verify character typed  S
    [Teardown]  Close Browser
+
+TC11 - Context Menu
+    [Documentation]    Verifies context menu functionality on hot spot area
+    ...    Precondition: Open Context Menu Page
+    Open Context Menu Page
+    Right Click On Hot Spot
+    Handle Future Dialogs    action=accept
+    Verify Context Menu Not Visible Outside Area
+    [Teardown]    Close Browser
