@@ -6,3 +6,4 @@ indent = 4
 continuation_indent = 4
 endline = true
 overwrite = true
+lineseparator = "unix"
