@@ -6,3 +6,6 @@ credentials:
 products:
   backpack: Sauce Labs Backpack
   bike_light: Sauce Labs Bike Light
+
+urls:
+  saucedemo: https://www.saucedemo.com/

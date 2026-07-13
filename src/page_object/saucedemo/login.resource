@@ -1,9 +1,10 @@
 *** Settings ***
 Library     Browser
 
+Variables   ../../../resources/saucedemo.yaml
 
 *** Variables ***
-${URL}                  https://www.saucedemo.com/
+${URL}                  ${urls}[saucedemo]
 ${USERNAME_FIELD}       id=user-name
 ${PASSWORD_FIELD}       id=password
 ${LOGIN_BUTTON}         id=login-button

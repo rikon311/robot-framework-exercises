@@ -15,7 +15,7 @@ TC01 - Add & Remove Elements
 
 TC02 - Dropdown
     [Documentation]    Verifies dropdown functionality from the page
-    ...    Precondition: Open "https://the-internet.herokuapp.com/dropdown" page
+    ...    Precondition: Open dropdown page
     Open "Dropdown" page
     Check selected option    Please select an option
     Select option    Option 1
