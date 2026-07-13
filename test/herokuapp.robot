@@ -110,3 +110,12 @@ TC12 - Login
     Insert Username
     Insert Password
     [Teardown]    Close Browser
+
+TC13 - jQuery UI Menu
+    [Documentation]    Verifies jQuery UI menu and download functionality
+    ...    Precondition: Open JQuery UI Page
+    Open JQuery UI Page
+    Click Menu Link
+    Hover Enable Menu
+    Pick Random File Type And Download
+    [Teardown]    Close Browser
