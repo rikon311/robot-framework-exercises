@@ -71,3 +71,14 @@ TC08 - File Download
     ${file_name}    Pick Random File Link
     ${file_path}    Download File    ${file_name}
     [Teardown]    Run Keywords    Delete Downloaded File    ${file_name}    AND    Close Browser
+
+TC09 - Entry ad
+   [Documentation]   Verifies the modal functionality
+   Open modal url
+   Close modal and check is disappeared
+   Refresh page x times  3
+   Check modal  False
+   Click "click here" link
+   Refresh page x times  1
+   Check modal  True
+   [Teardown]    Close Browser

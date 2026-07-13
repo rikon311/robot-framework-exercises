@@ -9,3 +9,4 @@ Resource    ./page_object/herokuapp/horizontalslider.resource
 Resource    ./page_object/herokuapp/checkbox.resource
 Resource    ./page_object/herokuapp/tinymce.resource
 Resource    ./page_object/herokuapp/filedownload.resource
+Resource    ./page_object/herokuapp/entryad.resource
