@@ -1,16 +1,17 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${KEY_PRESSES_URL}      https://the-internet.herokuapp.com/key_presses
+${KEY_PRESSES_URL}      ${urls}[key_presses]
 ${TEXT_FIELD}           id=target
 ${TEXTED_CHARACTER}     id=result
 
 
 *** Keywords ***
 Open "key presses" page
-    [Documentation]    Opens https://the-internet.herokuapp.com/key_presses
+    [Documentation]    Opens ${urls}[key_presses]
     New Browser    chromium    headless=False
     New Page    ${KEY_PRESSES_URL}
     Wait For Elements State    ${TEXT_FIELD}    visible

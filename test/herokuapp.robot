@@ -7,7 +7,7 @@ Resource            ../src/herokuapp_shared.resource
 *** Test Cases ***
 TC01 - Add & Remove Elements
     [Documentation]    Verifies add/remove element from the page
-    ...    Precondition: Open "https://the-internet.herokuapp.com/add_remove_elements/"
+    ...    Precondition: Open add/remove elements page"
     Open "Add/Remove elements" page
     Click "Add Element"
     Click "Delete" button
@@ -87,10 +87,10 @@ TC09 - Entry ad
 TC10 - Key presses
     [Documentation]    Checks whether keys are pressed or not, and the last key pressed is shown on the web page
     Open "key presses" page
-    Type in text field    supercalifragilistichespiralidoso
+    Type in text field    ${keypresses}[first_word]
     Verify character typed    O
     Clear text field
-    Type in text field    supercalifragilis
+    Type in text field    ${keypresses}[second_word]
     Verify character typed    S
     [Teardown]    Close Browser
 
@@ -107,8 +107,8 @@ TC12 - Login
     [Documentation]    Verifies login form functionality
     ...    Precondition: Open Login Page
     Open Login Page
-    Insert Username
-    Insert Password
+    Insert Username    ${credentials}[username]
+    Insert Password    ${credentials}[password]
     [Teardown]    Close Browser
 
 TC13 - jQuery UI Menu

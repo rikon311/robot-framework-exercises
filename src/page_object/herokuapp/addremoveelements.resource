@@ -1,16 +1,17 @@
 *** Settings ***
-Library     Browser
+Library         Browser
+Variables       ../../../resources/herokuapp.yaml
 
 
 *** Variables ***
-${URL_ADD_REMOVE_ELEMENTS}      https://the-internet.herokuapp.com/add_remove_elements/
+${URL_ADD_REMOVE_ELEMENTS}      ${urls}[add_remove]
 ${ADD_ELEMENT}                  text=Add Element
 ${DELETE_ELEMENT}               text=Delete
 
 
 *** Keywords ***
 Open "Add/Remove elements" page
-    [Documentation]    Opens "https://the-internet.herokuapp.com/add_remove_elements/" page and verifies it is visible
+    [Documentation]    Opens "${urls}[add_remove]" page and verifies it is visible
     New Browser    chromium    headless=False
     New Page    ${URL_ADD_REMOVE_ELEMENTS}
     Wait For Elements State    ${ADD_ELEMENT}    visible

@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_BASIC_AUTH}       https://admin:admin@the-internet.herokuapp.com/basic_auth
+${URL_BASIC_AUTH}       ${urls}[basic_auth]
 ${SUCCESS_MSG}          css=.example p
 
 

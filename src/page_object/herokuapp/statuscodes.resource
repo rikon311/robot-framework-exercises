@@ -1,10 +1,11 @@
 *** Settings ***
-Library     Browser
-Library     RequestsLibrary
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
+Library         RequestsLibrary
 
 
 *** Variables ***
-${URL_STATUS}       https://the-internet.herokuapp.com/status_codes
+${URL_STATUS}       ${urls}[status_codes]
 @{STATUS_CODES}     200    301    404    500
 
 

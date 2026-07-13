@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_CONTEXT}      https://the-internet.herokuapp.com/context_menu
+${URL_CONTEXT}      ${urls}[context_menu]
 ${HOT_SPOT}         id=hot-spot
 
 

@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${ENTRY_AD_URL}     https://the-internet.herokuapp.com/entry_ad
+${ENTRY_AD_URL}     ${urls}[entry_ad]
 ${MODAL_BOX}        css=div.modal
 ${MODAL_CLOSE}      css=div.modal-footer>p
 ${CLICK_HERE}       text=click here

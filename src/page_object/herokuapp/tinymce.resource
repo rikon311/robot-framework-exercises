@@ -1,10 +1,11 @@
 *** Settings ***
-Library     Browser
-Library     String
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
+Library         String
 
 
 *** Variables ***
-${URL_TINYMCE}      https://the-internet.herokuapp.com/tinymce
+${URL_TINYMCE}      ${urls}[tinymce]
 ${EDITOR_FRAME}     css=#mce_0_ifr
 ${EDITOR_BODY}      css=body#tinymce
 ${BOLD_BUTTON}      css=.tox-tbtn[aria-label="Bold"]

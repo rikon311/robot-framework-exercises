@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_CHECKBOXES}       https://the-internet.herokuapp.com/checkboxes
+${URL_CHECKBOXES}       ${urls}[checkboxes]
 ${CHECKBOX_1}           css=input[type="checkbox"]:nth-of-type(1)
 ${CHECKBOX_2}           css=input[type="checkbox"]:nth-of-type(2)
 

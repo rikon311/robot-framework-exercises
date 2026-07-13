@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_LOGIN}            https://the-internet.herokuapp.com/login
+${URL_LOGIN}            ${urls}[login]
 ${USERNAME_FIELD}       id=username
 ${PASSWORD_FIELD}       id=password
 
@@ -16,13 +17,13 @@ Open Login Page
     Wait For Elements State    ${USERNAME_FIELD}    visible
 
 Insert Username
-    [Documentation]    Inserts username and verifies it is visible
-    Type Text    ${USERNAME_FIELD}    tomsmith
+    [Arguments]    ${username}
+    Type Text    ${USERNAME_FIELD}    ${username}
     ${value}    Get Text    ${USERNAME_FIELD}
-    Should Be Equal As Strings    ${value}    tomsmith
+    Should Be Equal As Strings    ${value}    ${username}
 
 Insert Password
-    [Documentation]    Inserts password and verifies it is not visible
-    Type Text    ${PASSWORD_FIELD}    SuperSecretPassword!
+    [Arguments]    ${password}
+    Type Text    ${PASSWORD_FIELD}    ${password}
     ${type}    Get Attribute    ${PASSWORD_FIELD}    type
     Should Be Equal As Strings    ${type}    password

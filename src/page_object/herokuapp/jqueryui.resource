@@ -1,10 +1,11 @@
 *** Settings ***
-Library     Browser
-Library     Collections
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
+Library         Collections
 
 
 *** Variables ***
-${URL_JQUERYUI}         https://the-internet.herokuapp.com/jqueryui
+${URL_JQUERYUI}         ${urls}[jqueryui]
 ${MENU_LINK}            text=menu
 ${ENABLE_MENU}          text=Enable
 ${DOWNLOADS_MENU}       text=Downloads

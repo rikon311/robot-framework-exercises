@@ -1,9 +1,10 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_SLIDER}       https://the-internet.herokuapp.com/horizontal_slider
+${URL_SLIDER}       ${urls}[slider]
 ${SLIDER}           css=input[type="range"]
 ${SLIDER_VALUE}     css=#range
 

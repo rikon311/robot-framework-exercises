@@ -1,15 +1,16 @@
 *** Settings ***
-Library     Browser
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
 
 
 *** Variables ***
-${URL_DROPDOWN}     https://the-internet.herokuapp.com/dropdown
+${URL_DROPDOWN}     ${urls}[dropdown]
 ${DROPDOWN}         id=dropdown
 
 
 *** Keywords ***
 Open "Dropdown" page
-    [Documentation]    Open https://the-internet.herokuapp.com/dropdown url
+    [Documentation]    Open ${urls}[dropdown] url
     New Browser    chromium    headless=False
     New Page    ${URL_DROPDOWN}
     Wait For Elements State    ${DROPDOWN}    visible

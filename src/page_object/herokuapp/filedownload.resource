@@ -1,10 +1,11 @@
 *** Settings ***
-Library     Browser
-Library     OperatingSystem
+Variables       ../../../resources/herokuapp.yaml
+Library         Browser
+Library         OperatingSystem
 
 
 *** Variables ***
-${URL_DOWNLOAD}     https://the-internet.herokuapp.com/download
+${URL_DOWNLOAD}     ${urls}[download]
 ${DOWNLOAD_DIR}     ${EXECDIR}${/}resources${/}downloads
 ${FILE_LINKS}       css=.example a
 
