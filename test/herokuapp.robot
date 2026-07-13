@@ -102,3 +102,11 @@ TC11 - Context Menu
     Handle Future Dialogs    action=accept
     Verify Context Menu Not Visible Outside Area
     [Teardown]    Close Browser
+
+TC12 - Login
+    [Documentation]    Verifies login form functionality
+    ...    Precondition: Open Login Page
+    Open Login Page
+    Insert Username
+    Insert Password
+    [Teardown]    Close Browser
