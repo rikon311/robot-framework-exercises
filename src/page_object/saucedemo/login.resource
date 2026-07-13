@@ -1,7 +1,7 @@
 *** Settings ***
-Library     Browser
+Library         Browser
+Variables       ../../../resources/saucedemo.yaml
 
-Variables   ../../../resources/saucedemo.yaml
 
 *** Variables ***
 ${URL}                  ${urls}[saucedemo]

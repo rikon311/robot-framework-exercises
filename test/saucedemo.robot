@@ -2,7 +2,6 @@
 Documentation       Test Suite for SauceDemo application
 
 Resource            ../src/saucedemo_shared.resource
-Variables           ../resources/saucedemo.yaml
 
 
 *** Test Cases ***
