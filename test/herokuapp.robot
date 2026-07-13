@@ -82,3 +82,14 @@ TC09 - Entry ad
    Refresh page x times  1
    Check modal  True
    [Teardown]    Close Browser
+
+
+TC10 - Key presses
+   [Documentation]  Checks whether keys are pressed or not, and the last key pressed is shown on the web page
+   Open "key presses" page
+   Type in text field  supercalifragilistichespiralidoso
+   Verify character typed  O
+   Clear text field
+   Type in text field  supercalifragilis
+   Verify character typed  S
+   [Teardown]  Close Browser
