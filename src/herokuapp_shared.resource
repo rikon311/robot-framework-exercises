@@ -13,3 +13,4 @@ Resource    ./page_object/herokuapp/keypresses.resource
 Resource    ./page_object/herokuapp/contextmenu.resource
 Resource    ./page_object/herokuapp/login.resource
 Resource    ./page_object/herokuapp/jqueryui.resource
+Resource    ./page_object/herokuapp/basicauth.resource

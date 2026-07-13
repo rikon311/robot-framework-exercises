@@ -119,3 +119,10 @@ TC13 - jQuery UI Menu
     Hover Enable Menu
     Pick Random File Type And Download
     [Teardown]    Close Browser
+
+TC14 - Basic Auth
+    [Documentation]    Verifies basic authentication functionality
+    ...    Precondition: Open Basic Auth Page
+    Open Basic Auth Page
+    Verify Authentication Successful
+    [Teardown]    Close Browser
