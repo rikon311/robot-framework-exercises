@@ -1,0 +1,27 @@
+[tool.robotidy]
+line_length = 120
+separator = space
+spacecount = 4
+indent = 4
+continuation_indent = 4
+startline = false
+endline = true
+enabled = true
+overwrite = true
+show_diff = false
+formatting_enabled = true
+
+transformers = [
+    "AlignKeywordsSection:up_to_column=80",
+    "AlignTestCasesSection:up_to_column=80",
+    "AlignVariablesSection:up_to_column=80",
+    "IndentNestedKeywords",
+    "NormalizeSeparators",
+    "NormalizeNewLines:section_lines=1:keyword_lines=1:test_lines=1",
+    "RemoveEmptyLines",
+    "SmartSortKeywords:enabled=false",
+    "SplitTooLongKeyword:line_length=120",
+    "RenameKeywords:enabled=false",
+    "OrderSettings",
+    "OrderSettingsSection",
+]

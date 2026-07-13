@@ -1,0 +1,9 @@
+[tool.robocop]
+include = ["*"]
+exclude = []
+configure = [
+    "line-too-long:line_length:120",
+    "too-many-calls-in-keyword:max_calls:10",
+    "too-long-keyword:max_len:40",
+]
+ignore_default_rules = false

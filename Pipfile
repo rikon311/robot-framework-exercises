@@ -8,6 +8,8 @@ jsonschema = "*"
 robotframework = "==7.4.2"
 robotframework-browser = "==19.14.2"
 robotframework-requests = "==0.9.7"
+robotframework-robocop = "*"
+robotframework-tidy = "*"
 
 [requires]
 python_version = "3.12"
